@@ -10,7 +10,6 @@ logger = logging.getLogger(__name__)
 class PaymentClient(BaseClient):
     def __init__(self, app):
         super().__init__(app, "payment-service")
-        #self.service_name = "payment-service"  # Nombre que tiene registrado Eureka para el microservicio de usuarios
         self.base_url = app.config.get('PAYMENT_SERVICE_URL')
         self.timeout = 5
     
